@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ronaldo Seranllari's page </title>
+</head>
+
+<body style = "background-color:tan;">
+
+<h1> Ronaldo Seranllari's page </h1>
+<p> William Shakespeare is one of the greatest writers of his time in the English language. <br> 
+This page contains a quiz about Shakespeare and his work. Try it out <br>
+To learn more about William Shakespeare click on here: <a
+href = "https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">Visit Wikipedia Page about Shakespeare! </a></p>
+
+<h2> Where was William Shakespeare born?</h2>
+<img src = "william.png" alt = "William Shakespeare" width = "200" height = "300">
+<form id = "form1">
+<p><input type = "radio" name = "choice" value = "amsterdam" onclick = "question1('incorrect');" > Amsterdam</p>
+<p><input type = "radio" name = "choice" value = "england" onclick = "question1('correct');"> England</p>
+<p><input type = "radio" name = "choice" value = "austria" onclick = "question1('incorrect');"> Austria</p>
+<p id = "demo1" ></p>
+</form>
+
+<h2> Which of the following books was written by Shakespeare? </h2>
+<img src = "sonet.png" alt = "Paragraph"width = "200" height = "300">
+<form id = "form2">
+<p><input type = "radio" name = "choice" value = "Four Tragedies" onclick = "question2('correct');" > Four Tragedies</p>
+<p><input type = "radio" name = "choice" value = "timber" onclick = "question2('incorrect');"> Timber</p>
+<p><input type = "radio" name = "choice" value = "odyssey" onclick = "question2('incorrect');"> Odyssey</p>
+<p id = "demo2" ></p>
+</form>
+
+<h2> What was Shakespeare's wife's name?  </h2>
+<img src = "hathway.png" alt = "Anne Hathway" width = "200" height = "300">
+<form id = "form3">
+<p><input type = "radio" name = "choice" value = "jane austen" onclick = "question3('incorrect');" > Jane Austen</p>
+<p><input type = "radio" name = "choice" value = "anne frank" onclick = "question3('incorrect');"> Anne Frank</p>
+<p><input type = "radio" name = "choice"  value = "anne hathway" onclick = "question3('correct');"> Anne Hathway</p>
+<p id = "demo3" ></p>
+</form>
+
+<button onclick="Reset()">Reset</button>
+
+<script>
+
+function Reset() {
+	document.getElementById("form1").reset();
+    document.getElementById("form2").reset();
+    document.getElementById("form3").reset();
+  	document.getElementById("demo1").innerHTML = "";
+    document.getElementById("demo2").innerHTML = "";
+    document.getElementById("demo3").innerHTML = "";
+}
+function question1 (str) {
+	if (str === "correct") {	
+		document.getElementById("demo1").innerHTML = "Correct";
+	}
+    else{
+		document.getElementById("demo1").innerHTML = "Inorrect";
+	}
+}
+
+function question2 (str) {
+	if (str === "correct") {	
+		document.getElementById("demo2").innerHTML = "Correct";
+	}
+	else {
+		document.getElementById("demo2").innerHTML = "Inorrect";
+	}
+}
+
+function question3 (str) {
+	if (str === "correct") {	
+		document.getElementById("demo3").innerHTML = "Correct";
+	}
+	else {
+		document.getElementById("demo3").innerHTML = "Inorrect";
+	}
+}
+
+</script>
+
+</body>
+</html>
